@@ -12,18 +12,27 @@ var User = require('../models/user');
  * });
  */
 
+//GET users
 router.get("/", function(req, res) {
   User.find({}, function (err, users) {
     res.json(users);
   });
 });
 
+//GET users:id
 router.get("/:id", function(req, res) {
   User.findById(req.params.id, function (err, user) {
     if (err) return handleError (err);
     if(user) {
       res.json(user);
     }
+  });
+});
+
+//DELETE users:id
+router.delete("/:id", function(req, res) {
+  User.findOneAndRemove({"_id" : req.params.id}, function (err, user) {
+    res.json(user);
   });
 });
 
