@@ -28,6 +28,6 @@ var postSchema = new Schema({
   }]
 });
 
-var Post = mongoose.model('Posts', postSchema);
+var Post = mongoose.model('Post', postSchema);
 
 module.exports = Post;

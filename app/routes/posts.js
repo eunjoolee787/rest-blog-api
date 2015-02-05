@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var User = require('../models/post');
+var Post = require('../models/post');
 
 /**
  * This is an example of how to use the express router
@@ -11,5 +11,7 @@ var User = require('../models/post');
  *   res.json({"Hello": "World!"})
  * });
  */
+
+
 
 module.exports = router;
