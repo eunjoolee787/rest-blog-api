@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
+var Schema = mongoose.Schema;
 /**
  * Post Schema
  * title {String}   - the title of the post
@@ -13,7 +13,13 @@ var Schema = mongoose.Schema;
  * user {User}
  */
 var postSchema = new Schema({
-  // Implement
+  title: String,
+  content: String,
+  user: User,
+  comments: [{ 
+    content: String,
+    user: User
+  }]
 });
 
 var Post = mongoose.model('Posts', postSchema);
