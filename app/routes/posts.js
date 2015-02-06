@@ -12,6 +12,13 @@ var Post = require('../models/post');
  * });
  */
 
+//GET /posts/posts/:id
+
+//PUT  /posts/:id
+
+//POST /Post
+
+//DELETE /Post/:id
 
 
 module.exports = router;
