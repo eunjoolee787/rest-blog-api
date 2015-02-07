@@ -23,7 +23,7 @@ router.get("/", function(req, res) {
 router.get("/:id", function(req, res) {
   User.findById(req.params.id, function (err, user) {
     if (err) return handleError (err);
-    if(user) {
+    if (user) {
       res.json(user);
     }
   });
